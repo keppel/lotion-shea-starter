@@ -5,7 +5,7 @@ let app = lotion({
   initialState: {
     count: 0
   },
-  devMode: true // set this to false in production
+  devMode: process.env.PRODUCTION !== 'true'
 })
 
 app.use(function (state, tx, chainInfo) {
